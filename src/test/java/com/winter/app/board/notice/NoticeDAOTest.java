@@ -2,7 +2,10 @@ package com.winter.app.board.notice;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.sql.Connection;
 import java.util.List;
+
+import javax.activation.DataSource;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +17,7 @@ import com.winter.app.board.notice.NoticeDAO;
 class NoticeDAOTest {
 	@Autowired
 	private NoticeDAO noticeDAO;
+
 	
 	@Test
 	void addTest() throws Exception{
@@ -30,5 +34,7 @@ class NoticeDAOTest {
 		List<BoardVO> ar = noticeDAO.getList();
 		assertNotEquals(0, ar.size());
 	}
+	
+	
 
 }
